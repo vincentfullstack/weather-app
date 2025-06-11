@@ -1,6 +1,6 @@
 # 🌤️ Weather App
 
-A full-stack weather application built with **Next.js** (App Router), **Express**, and **MongoDB**. It fetches real-time weather data from the OpenWeather API and stores recent search history with pagination support.
+A full-stack weather application built with **Next.js** (App Router), **Node.js**, **Express**, and **MongoDB**. It fetches real-time weather data from the OpenWeather API and stores recent search history with pagination support.
 
 ---
 
@@ -13,6 +13,7 @@ A full-stack weather application built with **Next.js** (App Router), **Express*
 - Fully containerized with Docker  
 - Accessible UI using Material UI  
 - Graceful error handling for API limits and connectivity
+- Unit test components and util functions
 
 ---
 
@@ -26,16 +27,6 @@ A full-stack weather application built with **Next.js** (App Router), **Express*
 
 ---
 
-## 📁 Project Structure
-.
-├── client/ # Next.js frontend
-├── server/ # Express backend
-├── .env
-├── docker-compose.yml
-└── README.md
-
----
-
 ## ♿ Accessibility
 
 - Semantic HTML and ARIA where needed
@@ -46,7 +37,7 @@ A full-stack weather application built with **Next.js** (App Router), **Express*
 ---
 
 ## 🛠 Setup
-- git clone https://github.com/<your-username>/weather-app.git
+- git clone https://github.com/vincentfullstack/weather-app.git
 - cd weather-app
 ---
 
@@ -59,6 +50,12 @@ A full-stack weather application built with **Next.js** (App Router), **Express*
 - Frontend: http://localhost:3000
 - Backend: http://localhost:4000/history
 
+
+---
+
+## Run Unit Tests
+- cd client
+- npm test
 
 ---
 
