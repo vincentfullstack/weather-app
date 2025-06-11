@@ -1,0 +1,31 @@
+# docker-compose.yml
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    ports:
+      - "4000:4000"
+    env_file:
+      - ./server/.env
+    networks:
+      - weather-net
+
+  frontend:
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - NEXT_PUBLIC_BACKEND_URL=${NEXT_PUBLIC_BACKEND_URL}
+      - NEXT_PUBLIC_WEATHER_API_KEY=${NEXT_PUBLIC_WEATHER_API_KEY}
+    networks:
+      - weather-net
+    depends_on:
+      - backend
+
+networks:
+  weather-net:
